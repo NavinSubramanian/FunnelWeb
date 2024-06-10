@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #131921;
+        color: white;
+        font-family: Manrope, sans-serif;
+    }
+
+    .info-container {
+        background-color: rgba(255, 255, 255, 5%);
+        max-width: 800px;
+        margin: 10% auto;
+    }
+
+    .info-container>h1 {
+        text-align: center;
+        padding: 10px;
+        font-weight: 400;
+        color: #ff7a00;
+    }
+
+    .info-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-cont div {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .info-cont label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .info-cont input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: rgba(245, 245, 245, 0.807); 
+        color: #333;
+    }
+
+    .info-cont button {
+        background-color: #ff7a00;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .info-cont button:hover {
+        background-color: #ff7a00;
+    }
+</style>
+
+<body>
+    <form class="info-container">
+        <h1>Fill out the form to register course</h1>
+
+        <div class="info-cont">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div>
+                <label for="phone">Phone no:</label>
+                <input type="number" id="phone" name="phone">
+            </div>
+
+            <button>Register Now</button>
+        </div>
+    </form>
+</body>
+
+</html>
