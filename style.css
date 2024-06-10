@@ -30,6 +30,11 @@ body{
     z-index: -1000;
 }
 
+@media (max-width:500px){
+    .underLay{
+        height: 150vh;
+    }
+}
 
 /* First Section */
 
@@ -77,10 +82,15 @@ body{
 }
 .landingSection>h4{
     font-size: 21px;
-    font-size: clamp(10px, 2vw, 21px); 
+    font-size: clamp(16px, 2vw, 21px); 
     text-align: center;
     max-width: 50%;
     font-weight: 400;
+}
+@media (max-width:580px){
+    .landingSection>h4{
+        max-width: 90%;
+    }
 }
 
 
@@ -101,7 +111,7 @@ body{
 }
 .rightBox>img{
     width: 100%;
-    height: 50%;
+    height: 170px;
 }
 .rightBox>h3{
     font-size: 15px;
@@ -110,6 +120,14 @@ body{
     font-weight: 200;
     text-align: center;
 }
+
+@media (max-width:650px){
+    .rightBox>h3{
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
 .rightBox>button{
     padding: 11px 0;
     color: var(--bgcolor);
@@ -206,12 +224,12 @@ body{
     color: white;
 }
 .videoSection>h1{
-    font-size: clamp(20px, 5vw, 50px);
+    font-size: clamp(30px, 5vw, 50px);
     max-width: 70%;
     text-align: center;
 }
 .videoSection>h4{
-    font-size: clamp(13px, 5vw, 20px); 
+    font-size: clamp(13px, 3vw, 20px); 
     text-align: center;
     color: #8496AD;
     font-weight: 300;
@@ -221,6 +239,12 @@ body{
     /* background-color: white; */
     height: 50vh;
     border-radius: 20px;
+}
+
+@media (max-width:540px) {
+    .videoSection>h1{
+        max-width: 90%;
+    }
 }
 
 
@@ -244,11 +268,12 @@ body{
     row-gap: 20px;
 }
 .learnSection>h1{
-    font-size: clamp(20px, 5vw, 50px);
+    font-size: clamp(30px, 5vw, 50px);
     text-align: center;
 }
 .learnSection>p{
-    font-size: 18px;
+    font-size: clamp(13px, 3vw, 18px);
+    text-align: center;
     color: #8496AD;
 }
 
@@ -290,7 +315,7 @@ body{
         row-gap: 20px;
     }
     .learnSection{
-        height: 100vh;
+        height: 120vh;
     }
 }
 
@@ -331,6 +356,9 @@ body{
 .left>img{
     width: 100%;
 }
+.left>p{
+    font-size: clamp(13px,3vw,18px);
+}
 
 .right > h2 {
     margin-left: 40px;
@@ -366,9 +394,14 @@ body{
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .left{
+        text-align: center;
+    }
 
     .right {
         margin-top: 20px;
+        row-gap: 10px;
+        padding: 10px 0;
     }
 
     .right > button {
@@ -393,7 +426,7 @@ body{
     color: white;
     text-align: center;
     margin-top: 50px;
-    font-size: clamp(20px, 5vw, 50px);;
+    font-size: clamp(30px, 5vw, 50px);;
     margin-bottom: 20px;
 }
 
@@ -449,13 +482,13 @@ body{
 .main_slider>h1{
     color: white;
     font-family: var(--mainfont);
-    font-size: clamp(20px, 5vw, 50px);
+    font-size: clamp(30px, 5vw, 50px);
     text-align: center;
 }
 .main_slider>p{
     color:#8496AD;
     font-family: var(--mainfont);
-    font-size: 18px;
+    font-size: clamp(13px, 3vw, 18px);
     text-align: center;
     max-width: 70%;
 }
