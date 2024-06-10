@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 :root{
     --maincolor: #FF7A00;
@@ -20,11 +21,12 @@ body{
     position: absolute;
     content: "";
     background-color: var(--lightbg);
-    width: 110vw;
-    height: 110vh;
-    transform: rotate(-5deg);
+    width: 100vw;
+    height: 120vh;
     top: -20px;
-    left: -35px;
+    /* transform: rotate(-5deg);
+    left: -35px; */
+    left: 0;
     z-index: -1000;
 }
 
@@ -68,7 +70,7 @@ body{
     font-weight: 200;
 }
 .landingSection>h1{
-    font-size: clamp(25px, 5vw, 75px); 
+    font-size: clamp(35px, 5vw, 75px); 
     padding: 0 20px;
     text-align: center;
     text-transform: uppercase;
@@ -109,7 +111,14 @@ body{
     text-align: center;
 }
 .rightBox>button{
-    padding: 14px 0;
+    padding: 11px 0;
+    color: var(--bgcolor);
+    font-family: var(--mainfont);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 800;
 }
 
 .leftBox{
@@ -127,27 +136,31 @@ body{
 .leftLastBox{
     display: flex;
     flex-direction: column;
+    row-gap: 10px;
     width: 100%;
-    padding: 7px;
-}
-.leftLastBox>h3:first-child{
-    text-align: center;
+    padding-left: 20px;
     position: relative;
-    margin: 0 auto;
 }
-.leftLastBox>h3:first-child::after{
+.leftLastBox::after{
     height: 100%;
     content: "";
     position: absolute;
     top: 0;
-    left: -9px;
+    left: 0;
     width: 2px;
     background-color: var(--maincolor);
 }
 
-.leftLastBox>h3:last-child{
+.leftLastBox>a{
     height: 100%;
     width: 100%;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    background-color: var(--maincolor);
+    padding: 10px;
+    text-align: center;
 }
 
 .leftLastBox>div{
@@ -155,12 +168,21 @@ body{
     width: 100%;
     align-items: center;
     column-gap: 20px;
-    padding: 20px;
+}
+.leftLastBox>div>div>h4{
+    font-weight: 200;
+    font-size: 12px;
 }
 .leftLastBox>div>img{
-    height: 100%;
-    width: 50px;
     border-radius: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    .mainBox{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
 }
 
 
@@ -233,7 +255,7 @@ body{
 .learnSection>div{
     display: flex;
     width: 70%;
-    height: 29vh;
+    height: 25vh;
     /* flex-wrap: wrap; */
     column-gap: 30px;
     align-content: center;
@@ -244,7 +266,6 @@ body{
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-around;
     text-align: center;
 }
 .learnSection>div>div>i{
@@ -252,11 +273,14 @@ body{
     margin: 0 auto;
     background-color: white;
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px;
     position: relative;
     top: -20px;
     box-shadow: 0 0 10px black;
     border-radius: 50%;
+}
+.learnSection>div>div>h2{
+    margin-bottom: 10px;
 }
 
 
