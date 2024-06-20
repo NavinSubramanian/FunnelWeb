@@ -69,9 +69,17 @@
         </div>
     </section>
 
+    <nav class="mainNavBar">
+        <div>
+            <h2>Offer Ends IN:</h2>
+            <div></div>
+        </div>
+        <button>Register Now</button>
+    </nav>
+
     <section class="videoSection" id="trailer">
-        <h1>Get this specific outcome in no time, without this struggle</h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit malesuada et libero scelerisque pellentesque.</h4>
+        <h1>Enroll now for just ₹149 and get a certificate upon completion!</h1>
+        <h4>This affordable pricing ensures that everyone has the opportunity to advance their skills and carreer with MD 365 </h4>
         <img src="./video.jpg" alt="Video">
     </section>
 
@@ -171,90 +179,99 @@
         </div>
     </section>
 
-    <section class="faq">
-        <h1>Frequently asked questions</h1>
-        <div class="faq-container">
-            <i class="fa-solid fa-circle-question faq-icon"></i>
-            <div class="faq-text-content">
-                <h2>First question goes here</h2>
-                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
-                    aenean.
-                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
-                    non
-                    fames.</p>
-            </div>
-        </div>
-
-        <div class="faq-container">
-            <i class="fa-solid fa-circle-question faq-icon"></i>
-            <div class="faq-text-content">
-                <h2>First question goes here</h2>
-                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
-                    aenean.
-                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
-                    non
-                    fames.</p>
-            </div>
-        </div>
-
-        <div class="faq-container">
-            <i class="fa-solid fa-circle-question faq-icon"></i>
-            <div class="faq-text-content">
-                <h2>First question goes here</h2>
-                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
-                    aenean.
-                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
-                    non
-                    fames.</p>
-            </div>
-        </div>
-
-        <div class="faq-container">
-            <i class="fa-solid fa-circle-question faq-icon"></i>
-            <div class="faq-text-content">
-                <h2>First question goes here</h2>
-                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
-                    aenean.
-                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
-                    non
-                    fames.</p>
-            </div>
-        </div>
-
-        <div class="faq-container">
-            <i class="fa-solid fa-circle-question faq-icon"></i>
-            <div class="text-content">
-                <h2>First question goes here</h2>
-                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
-                    aenean.
-                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
-                    non
-                    fames.</p>
-            </div>
-        </div>
-
-    </section>
-
     <section class="learnSection">
         <h1>What other's review on this</h1>
         <p style="margin-bottom: 10px;">Dont belive us? Hear from our valuable customers.</p>
-        <div>
-            <div>
-                <i class="fa-solid fa-user"></i>
-                <h2>Name</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra elementum in volutpat leo eu etiam a tellus.</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-user"></i>
-                <h2>Name</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra elementum in volutpat leo eu etiam a tellus.</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-user"></i>
-                <h2>Name</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra elementum in volutpat leo eu etiam a tellus.</p>
+        <div class="learnContainer">
+            <article class="review">
+                <div class="img-container">
+                    <img src="http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person2.jpg" alt="person-1" id="person-img"> 
+                </div>
+               
+                <h4 id="author">Sara Jones</h4>
+                <p id="job">UX DESIGNER</p>
+                <p id="info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?
+                </p>
+                <!-- prev next buttons -->
+                <div class="button-container">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <!-- random button-->
+                <div class="quote"><i class="fa-solid fa-quote-right" id="quote"></i></div>
+                <div class="underline"></div>
+            </article>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h1>Frequently asked questions</h1>
+        
+        <button class="accordion">First question goes here</button>
+        <div class="faq-container">
+            <!-- <i class="fa-solid fa-circle-question faq-icon"></i> -->
+            <div class="faq-text-content">
+                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
+                    aenean.
+                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
+                    non
+                    fames.</p>
             </div>
         </div>
+
+        <button class="accordion">First question goes here</button>
+        <div class="faq-container">
+            <!-- <i class="fa-solid fa-circle-question faq-icon"></i> -->
+            <div class="faq-text-content">
+                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
+                    aenean.
+                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
+                    non
+                    fames.</p>
+            </div>
+        </div>
+
+        <button class="accordion">First question goes here</button>
+        <div class="faq-container">
+            <!-- <i class="fa-solid fa-circle-question faq-icon"></i> -->
+            <div class="faq-text-content">
+                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
+                    aenean.
+                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
+                    non
+                    fames.</p>
+            </div>
+        </div>
+
+        <button class="accordion">First question goes here</button>
+        <div class="faq-container">
+            <!-- <i class="fa-solid fa-circle-question faq-icon"></i> -->
+            <div class="faq-text-content">
+                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
+                    aenean.
+                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
+                    non
+                    fames.</p>
+            </div>
+        </div>
+
+        <button class="accordion">First question goes here</button>
+        <div class="faq-container">
+            <!-- <i class="fa-solid fa-circle-question faq-icon"></i> -->
+            <div class="text-content">
+                <p>Answer ipsum dolor sit amet, consectetur adipiscing elit. Gravida ac nullam fermentum odio in nunc,
+                    aenean.
+                    In urna non urna, feugiat. Leo non, iaculis est euismod amet lacus, eu, dignissim. Curabitur id nunc
+                    non
+                    fames.</p>
+            </div>
+        </div>
+
     </section>
 
 
@@ -275,16 +292,43 @@
         </div>
     </footer>
 
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
-     <!-- JQuery -->
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            console.log(panel)
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
 
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  
-  <!-- Slick JS -->
-  
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            }
+        });
+        }
+    </script>
 
-  <!-- For Carousel -->
+
+    <!-- Javascript-->
+    
+    <script src="https://kit.fontawesome.com/b93801da07.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+    <!-- JQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+    <!-- Slick JS -->
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <!-- For Carousel -->
     
   <script type="text/javascript">
     $('.cont__blog').slick({
