@@ -45,17 +45,19 @@ body{
     max-width: 80%;
     margin: 20px auto;
     margin-top: 50px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-family: var(--mainfont);
     padding: 14px;
     align-items: center;
     justify-content: space-between;
     border-radius: 30px;
+    box-shadow: 1px 1px 10px rgb(129, 129, 129);
     z-index: 1000;
     position: sticky;
     top: 0;
 }
-.mainNavBar>button{
+.mainNavBar>a{
+    text-decoration: none;
     background-color: var(--maincolor);
     border: none;
     color: white;
@@ -63,11 +65,21 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-.mainNavBar>div>h2{
-    font-size: clamp(14px, 5vw, 25px);
+.mainNavBar>div{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.mainNavBar>div>p{
+    font-size: clamp(9px, 3vw, 20px);
+    font-weight: 500;
+}
+.mainNavBar>div>i{
+    color: var(--maincolor);
+    font-size: 20px;
 }
 @media (max-width:475px){
-    .mainNavBar>button{
+    .mainNavBar>a{
         padding: 4px 10px;
         font-size: 12px;
     }
@@ -105,7 +117,7 @@ body{
 }
 .landingSection>img{
     height: 50px;
-    width: 100px;
+    width: 150px;
 }
 .landingSection>p{
     color: var(--maincolor);
@@ -150,13 +162,15 @@ body{
 .rightBox{
     flex-basis: 60%;
     display: flex;
+    padding-top: 10px;
     flex-direction: column;
     justify-content: space-between;
 }
 .rightBox>img{
-    width: 100%;
-    height: 170px;
-    object-fit: contain;
+    width: 70%;
+    margin: 0 auto;
+    height: 200px;
+    object-fit: cover;
 }
 .rightBox>h3{
     font-size: 15px;
@@ -174,7 +188,7 @@ body{
 }
 
 .rightBox>button{
-    padding: 11px 0;
+    padding: 9.5px 0;
     color: var(--bgcolor);
     font-family: var(--mainfont);
     background-color: white;
@@ -217,7 +231,6 @@ body{
 .leftLastBox>a{
     height: 100%;
     width: 100%;
-    cursor: pointer;
     color: white;
     text-decoration: none;
     font-weight: 800;
@@ -237,7 +250,9 @@ body{
     font-size: 12px;
 }
 .leftLastBox>div>img{
-    border-radius: 10px;
+    border-radius: 50%;
+    height: 50px;
+    object-fit: cover;
 }
 
 @media screen and (max-width:1000px) {
@@ -245,9 +260,16 @@ body{
         flex-direction: column;
         row-gap: 20px;
     }
-
+    .rightBox{
+        row-gap: 10px;
+    }
 }
 
+@media (max-width:635px){
+    .rightBox>img{
+        width: 100%;
+    }
+}
 
 
 
@@ -279,16 +301,15 @@ body{
     color: #8496AD;
     font-weight: 300;
 }
-.videoSection>img{
+.videoSection>video{
     width: 50%;
     /* background-color: white; */
-    height: 60vh;
+    height: auto;
     margin-bottom: 20px;
-    border-radius: 20px;
 }
 
 @media (max-width:950px){
-    .videoSection>img{
+    .videoSection>video{
         width: 80%;
     }
 }
@@ -296,9 +317,6 @@ body{
 @media (max-width:540px) {
     .videoSection>h1{
         max-width: 90%;
-    }
-    .videoSection>img{
-        height: 40vh;
     }
 }
 
@@ -520,6 +538,7 @@ body{
 }
 .left>img{
     width: 100%;
+    border-radius: 20px;
 }
 .left>p{
     font-size: clamp(13px,3vw,18px);
@@ -531,16 +550,17 @@ body{
 }
 
 .right > button {
-    background: linear-gradient(#ff7a00, #ffac60);
+    background: #ff7a00;
     color: white;
     height: 48px;
     width: 30%;
+    transition: 0.3s;
     border: none;
     cursor: pointer;
 }
 
 .right > button:hover {
-    background: #ff7a00;
+    background-color: #fe9839;
 }
 
 .right-arrow {
@@ -561,6 +581,7 @@ body{
     }
     .left{
         text-align: center;
+        padding: 0 20px;
     }
 
     .right {
@@ -590,6 +611,13 @@ body{
     row-gap: 10px;
     max-width: 80%;
     margin: 0 auto;
+}
+
+.faq>p{
+    font-size: clamp(13px, 3vw, 18px);
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8496AD;
 }
 
 .faq > h1 {
@@ -631,12 +659,12 @@ body{
 
 
 .accordion:after {
-    content: '\02795';
+    content: '\2795';
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
-  }
+}
   
 .active:after {
     content: "\2796";
@@ -684,6 +712,7 @@ body{
     font-family: var(--mainfont);
     font-size: clamp(13px, 3vw, 18px);
     text-align: center;
+    margin: 20px 0;
     max-width: 70%;
 }
 @media (max-width:535px){
@@ -730,7 +759,57 @@ body{
 }
 
 
+.course-breakdowns{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    font-family: var(--mainfont);
+}
 
+.course-container{
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.course-container>h2{
+    color: var(--maincolor);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-container>p{
+    color: black;
+    font-size: 14px;
+}
+
+@media (max-width:500px){
+    .course-container>p{
+        font-size: 13px;
+    }
+}
+
+.timePeriod{
+    background-color: #FF7A00;
+    color: white;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: 9px;
+}
+
+@media (max-width:655px){
+    .course-breakdowns{
+        width: 90%;
+    }
+    .course-container{
+        margin: 10px 0;
+    }
+}
 
 
 /* Footer */
