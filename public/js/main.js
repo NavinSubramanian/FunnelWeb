@@ -4,7 +4,7 @@ const reviews = [
           name: 'Sara Jones',
           job: 'UX DESIGNER',
           img: 'http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person2.jpg',
-          text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+          text: 'The course was easy to follow, and I learned a lot in just a few hours. Definitely worth ₹149!',
   
       },  
     {
@@ -12,7 +12,7 @@ const reviews = [
           name: 'susan smith',
           job: 'web developer',
           img: 'https://www.masslive.com/resizer/kNl3qvErgJ3B0Cu-WSBWFYc1B8Q=/arc-anglerfish-arc2-prod-advancelocal/public/W5HI6Y4DINDTNP76R6CLA5IWRU.jpeg',
-          text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+          text: 'Great value for money! The lessons were simple, and the certification boosted my confidence.',
   
       },
       {
@@ -20,7 +20,7 @@ const reviews = [
           name: 'anna johnson',
           job: 'web designer',
           img: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
-          text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+          text: 'I didn\'t expect much for the price, but I was really impressed with how much I learned!',
   
       },
       {
@@ -28,14 +28,14 @@ const reviews = [
           name: 'peter jones',
           job: 'intern',
           img: 'http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person4.jpg',
-          text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+          text: 'I loved the hands-on exercises. The course helped me understand Microsoft Dynamics 365 easily!',
       },
       {
           id: 4,
           name: 'bill anderson',
           job: 'the boss',
-          img: 'https://www.admenergy.com.mx/wp-content/uploads/person6.jpg',
-          text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+          img: 'http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person4.jpg',
+          text: 'The course was super helpful, and the instructor made everything easy to understand. I feel more confident and ready now!',
       },
   ];
   
