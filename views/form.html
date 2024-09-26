@@ -4,11 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Sharpsys</title>
+    <link rel="icon" href="https://sharpsyssoft.com/wp-content/uploads/2022/10/cropped-Site-Icon_SSS-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://sharpsyssoft.com/wp-content/uploads/2022/10/cropped-Site-Icon_SSS-192x192.png" sizes="192x192">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
     <style>
+        *{
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
+            font-family: 'Manrope', Arial, sans-serif;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -25,6 +37,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .bg-main::after{
             position: absolute;
             content: "";
@@ -32,9 +45,9 @@
             width: 100%;
             z-index: -100;
             top: 0;
-            background-image: url("https://i.pinimg.com/originals/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg");
-            background-size: 100%;
-            opacity: 0.1;
+            background-image: url("https://png.pngtree.com/element_our/png/20180918/beautiful-cube-pattern-png_92262.jpg");
+            background-size: 300px;
+            opacity: 0.05;
         }
         .bg-main::before{
             position: absolute;
@@ -52,7 +65,8 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 350px;
+            width: 400px;
+            margin: 20px;
             text-align: center;
         }
 
