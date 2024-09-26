@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(express.static(__dirname))
+app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
 const users = mongoose.model("data",userSchema)
 
 app.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,'index.html'))
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 })
 
 app.post('/post',async (req,res)=>{
@@ -44,8 +44,12 @@ app.post('/post',async (req,res)=>{
     res.redirect('/payment.html');
 })
 
+app.get('/form', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'views', 'form.html'))
+})
+
 app.get('/payment.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'payment.html'));
+    res.sendFile(path.join(__dirname, 'views', 'payment.html'));
 });
 
 app.listen(port,()=>{
