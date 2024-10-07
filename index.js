@@ -52,6 +52,26 @@ app.get('/payment.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'payment.html'));
 });
 
+app.get('/terms', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'views', 'terms.html'));
+})
+
+app.get('/shipping', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'views', 'shipping.html'));
+})
+
+app.get('/privacy', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'views', 'privacy.html'));
+})
+
+app.get('/cancellations', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'views', 'cancellations.html'));
+})
+
+app.get('/contact', (req,res)=>{
+    res.sendFile(path.join(__dirname, 'views', 'contact.html'));
+})
+
 app.listen(port,()=>{
     console.log("Server running in port",port)
 })

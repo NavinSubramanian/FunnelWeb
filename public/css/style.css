@@ -864,12 +864,25 @@ footer{
     line-height: 28px;
     font-size: 14px;
 }
+.footer-content > div{
+    display: flex;
+    column-gap: 10px;
+    margin: 1rem 0 2rem 0;
+}
+.footer-content > div > a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+.footer-content > div > a:hover{
+    color: var(--maincolor);
+} 
 .socials{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 0 0;
 }
 .socials li{
     margin: 0 10px;
