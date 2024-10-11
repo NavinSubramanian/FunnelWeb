@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sharpsys</title>
+    <link rel="icon" href="https://sharpsyssoft.com/wp-content/uploads/2022/10/cropped-Site-Icon_SSS-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://sharpsyssoft.com/wp-content/uploads/2022/10/cropped-Site-Icon_SSS-192x192.png" sizes="192x192">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/payment.css?v=1.0.1">
+
+    <style>
+        .sucessClass{
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: #88B04B;
+            font-weight: 900;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #404F5E;
+            font-size:20px;
+            line-height: 25px;
+            margin: 0;
+            max-width: 350px;
+        }
+        i {
+            color: #9ABC66;
+            font-size: 100px;
+            line-height: 200px;
+            margin-left:-15px;
+        }
+        .card {
+            background: white;
+            padding: 60px;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px #C8D0D8;
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            border-bottom: 5px solid #88B04B;
+        }
+
+        @media (max-width:445px){
+            h1{
+                font-size: 28px;
+            }
+            p{
+                font-size: 16px;
+            }
+            i{
+                font-size: 75px;
+                line-height: 150px;
+            }
+            .card>div{
+                height: 150px !important;
+                width: 150px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sucessClass">
+        <div class="card">
+            <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+              <i class="checkmark">✓</i>
+            </div>
+            <h1>Payment Success</h1> 
+            <p>We received your purchase request, we'll be in touch shortly!</p>
+        </div>
+    </div>
+</body>
+</html>

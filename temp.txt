@@ -1,0 +1,59 @@
+"callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+
+
+alert(response.razorpay_payment_id);
+alert(response.razorpay_order_id);
+alert(response.razorpay_signature);
+
+
+Testing Purposes =>
+
+
+<script>
+
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            full_name: params.get('full_name'),
+            email: params.get('email'),
+            phone: params.get('phone')
+        };
+    }
+
+    const user = getQueryParams();
+    console.log(user);
+
+    var options = {
+        "key": "rzp_test_cAgcC800ElvFY1",
+        "amount": "14900", 
+        "currency": "INR",
+        "name": "Sharpsys Training Program",
+        "description": "Test Transaction",
+        "image": "https://example.com/your_logo",
+        "order_id": "order_P7cEKiOkavAUN9",
+        "handler": function (response){
+            window.location.href = "/success";
+        }, 
+        "prefill": { 
+            "name": user.full_name, 
+            "email": user.email,
+            "contact": user.phone
+        },
+        "notes": {
+            "address": "Razorpay Corporate Office"
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response){
+        alert("Payment failed. Please try again.");
+        window.location.href = "/payment";
+    });
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    
+</script>

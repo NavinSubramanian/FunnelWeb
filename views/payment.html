@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/payment.css?v=1.0.1">
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
     <div class="tempClass">
@@ -71,5 +73,57 @@
             </div>
         </div>
     </div>
+
+
+    <!-- razorpay -->
+
+    <script>
+
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                full_name: params.get('full_name'),
+                email: params.get('email'),
+                phone: params.get('phone')
+            };
+        }
+    
+        const user = getQueryParams();
+        console.log(user);
+    
+        var options = {
+            "key": "rzp_live_mrsc78epGz3Qk2",
+            "amount": "14900", 
+            "currency": "INR",
+            "name": "Sharpsys Training Program",
+            "description": "Test Transaction",
+            "image": "https://sharpsyssoft.com/wp-content/uploads/2022/10/cropped-Site-Icon_SSS-192x192.png",
+            "order_id": "order_P7bFEzONK9Ikp8",
+            "handler": function (response){
+                window.location.href = "/success";
+            }, 
+            "prefill": { 
+                "name": user.full_name, 
+                "email": user.email,
+                "contact": user.phone
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+            alert("Payment failed. Please try again.");
+            window.location.href = "/payment";
+        });
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    
+    </script>
 </body>
 </html>

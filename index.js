@@ -41,15 +41,23 @@ app.post('/post',async (req,res)=>{
     })
     await cur.save();
     
-    res.redirect('/payment.html');
+    res.redirect(`/payment?full_name=${encodeURIComponent(full_name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`);
 })
 
 app.get('/form', (req,res)=>{
     res.sendFile(path.join(__dirname, 'views', 'form.html'))
 })
 
-app.get('/payment.html', (req, res) => {
+app.get('/payment', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'payment.html'));
+});
+
+app.get('/success', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'success.html'));
+});
+
+app.get('/retry', (req, res) => {
+    res.redirect('/payment');
 });
 
 app.get('/terms', (req,res)=>{

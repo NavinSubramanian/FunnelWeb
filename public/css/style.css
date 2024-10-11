@@ -179,6 +179,9 @@ body{
     font-weight: 200;
     text-align: center;
 }
+.onlymobile{
+    display: none;
+}
 
 @media (max-width:650px){
     .rightBox>h3{
@@ -279,6 +282,12 @@ body{
     }
     .rightBox>h3{
         text-align: left;
+    }
+    .onlymobile{
+        display: block;
+    }
+    .onlylap{
+        display: none;
     }
 }
 
